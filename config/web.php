@@ -41,15 +41,18 @@ $config = [
                 ],
             ],
         ],
+        'taskExchangeRates' => [
+            'class' => 'app\components\TestExchangeRatesComponent',
+            'apiKey' => '15fe4112657343408550c2ab98922257',
+        ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+
     ],
     'params' => $params,
 ];

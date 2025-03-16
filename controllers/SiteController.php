@@ -125,4 +125,21 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionTest()
+    {
+        $historicalRates = Yii::$app->taskExchangeRates->getHistoricalRates('2025-03-15');
+        if ($historicalRates) {
+            echo '<pre>';
+            print_r($historicalRates);
+            echo '</pre>';
+        }
+        $latestRates = Yii::$app->taskExchangeRates->getLatestRates();
+        if ($latestRates) {
+            echo '<pre>';
+            print_r($latestRates);
+            echo '</pre>';
+        }
+        exit();
+    }
 }
